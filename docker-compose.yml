@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  ssh-chat:
+    image: marcoslater/ssh-chat:latest
+    restart: always
+    ports:
+      - "2022:2022"
+    volumes:
+      - ./ssh-chat-key:/ssh_key
+      - ./ssh-chat/admin_keys:/admin_keys
+    container_name: ssh-chat
