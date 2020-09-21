@@ -34,6 +34,7 @@ services:
     volumes:
       - ./ssh-chat-key:/ssh_key
       - ./ssh-chat/admin_keys:/admin_keys
+      - ./motd:/motd
     container_name: ssh-chat
 ```
 
