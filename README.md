@@ -2,6 +2,8 @@
 
 Docker image of [ssh-chat](https://github.com/shazow/ssh-chat) by [shazow](https://github.com/shazow).
 
+Dockerhub: [ssh-chat](https://hub.docker.com/r/byreqz/ssh-chat)
+
 # Usage
 
 Generate keys outside of Docker to keep persistence, and not get warnings:
