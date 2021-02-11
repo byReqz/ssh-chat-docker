@@ -5,5 +5,5 @@ if [ -f ssh_key ]; then
 else
 	echo "SSH Key not found at /ssh_key. Generating..."
 	ssh-keygen -t rsa -b 4096 -f /ssh_key -q -N ''
-	/ssh-chat -i /ssh_key --admin /admin_keys --motd=/motd $@
+	/ssh-chat -i /ssh_key --admin="/admin_keys" --motd=/motd $@
 fi
