@@ -8,24 +8,24 @@ Dockerhub: [ssh-chat](https://hub.docker.com/r/byreqz/ssh-chat)
 
 Generate keys outside of Docker to keep persistence, and not get warnings:
 
-```
+```bash
 $ ssh-keygen -t rsa -b 4096 -N '' -f ./ssh-chat-key
 ```
 
 Run the docker image:
 
-```
+```bash
 $ docker run -p 2022:2022 -v /ssh-chat-key:/ssh_key -v /admin_keys:/admin_keys  byreqz/ssh-chat:latest
 ```
 
 You may supply additional arguments to the image, example:
 
-```
+```bash
 $ docker run -p 22:22 -v /ssh-chat-key:/ssh_key  -v /admin_keys:/admin_keys byreqz/ssh-chat:latest --bind ":22"
 ```
 
 Docker Compose: 
-```
+```yaml
 version: '3.1'
 services:
   ssh-chat:
